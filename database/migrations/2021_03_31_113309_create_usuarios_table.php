@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateProblemaQuatrosTable extends Migration
+class CreateUsuariosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,11 @@ class CreateProblemaQuatrosTable extends Migration
      */
     public function up()
     {
-        Schema::create('problema_quatros', function (Blueprint $table) {
+        Schema::create('usuarios', function (Blueprint $table) {
             $table->id();
-            $table->string('fibonacci');
+            $table->string('usuario');
+            $table->foreignId('livro_id')->constrained('livros');
+            $table->string('tipo');
             $table->timestamps();
         });
     }
@@ -27,6 +29,6 @@ class CreateProblemaQuatrosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('problema_quatros');
+        Schema::dropIfExists('usuarios');
     }
 }

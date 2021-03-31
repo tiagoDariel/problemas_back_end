@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\problemaQuatro;
+namespace App\Http\Controllers\biblioteca;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class ProblemaQuatroController extends Controller
+class UsuarioController extends Controller
 {
     /**
      * Display a listing of the resource.

@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\problemaDois;
+namespace App\Http\Controllers\biblioteca;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class ProfissaoController extends Controller
+class LivroController extends Controller
 {
     /**
      * Display a listing of the resource.

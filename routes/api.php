@@ -1,7 +1,6 @@
 <?php
 
-use App\Http\Controllers\problemaDois\ProblemaDoisController;
-use App\Http\Controllers\problemaUm\ProblemaUmController;
+use App\Http\Controllers\biblioteca\EmprestimoController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +13,5 @@ use Illuminate\Support\Facades\Route;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-Route::apiResource('/problema-1', ProblemaUmController::class);
+Route::apiResource('/biblioteca', EmprestimoController::class);
 Route::apiResource('/problema-2', ProblemaDoisController::class);

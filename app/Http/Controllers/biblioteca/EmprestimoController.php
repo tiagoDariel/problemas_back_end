@@ -1,12 +1,14 @@
 <?php
 
-namespace App\Http\Controllers\problemaDois;
+namespace App\Http\Controllers\biblioteca;
 
 use App\Http\Controllers\Controller;
-use App\Models\problemaDois\ProblemaDois;
+use App\Models\biblioteca\Emprestimo;
+use App\Models\biblioteca\Livro;
+use App\Models\biblioteca\Usuario;
 use Illuminate\Http\Request;
 
-class ProblemaDoisController extends Controller
+class EmprestimoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +17,7 @@ class ProblemaDoisController extends Controller
      */
     public function index()
     {
-        return ProblemaDois::with('usuario')->get();
+        return Livro::with('locador', 'emprestimo')->get();
     }
 
     /**
