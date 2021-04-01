@@ -16,7 +16,6 @@ class CreateUsuariosTable extends Migration
         Schema::create('usuarios', function (Blueprint $table) {
             $table->id();
             $table->string('usuario');
-            $table->foreignId('livro_id')->nullable()->constrained('livros');
             $table->string('profissao');
             $table->timestamps();
         });

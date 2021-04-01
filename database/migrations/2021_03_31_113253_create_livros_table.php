@@ -16,6 +16,7 @@ class CreateLivrosTable extends Migration
         Schema::create('livros', function (Blueprint $table) {
             $table->id();
             $table->string('nome_livro');
+            $table->foreignId('usuario_id')->nullable()->constrained('usuarios');
             $table->timestamps();
         });
     }

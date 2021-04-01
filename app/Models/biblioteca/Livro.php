@@ -16,7 +16,7 @@ class Livro extends Model
         'updated_at',
     ];
     public function locador() {
-        return $this->hasOne(Usuario::class, 'livro_id');
+        return $this->hasOne(Usuario::class, 'id', 'livro_id');
     }
     public function emprestimo() {
         return $this->hasOne(Emprestimo::class, 'livro_id');
