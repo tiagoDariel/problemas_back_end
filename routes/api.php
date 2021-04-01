@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\biblioteca\EmprestimoController;
+use App\Http\Controllers\biblioteca\BibliotecaController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,5 +13,7 @@ use Illuminate\Support\Facades\Route;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-Route::apiResource('/biblioteca', EmprestimoController::class);
-Route::apiResource('/problema-2', ProblemaDoisController::class);
+Route::get('/biblioteca-livro', [BibliotecaController::class, 'listLivro']);
+Route::get('/biblioteca-usuario', [BibliotecaController::class, 'listUsuario']);
+Route::post('/biblioteca-save-livro', [BibliotecaController::class, 'createLivro']);
+Route::post('/biblioteca-save-usuario', [BibliotecaController::class, 'createUsuario']);

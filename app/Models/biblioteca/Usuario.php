@@ -10,13 +10,13 @@ class Usuario extends Model
     use HasFactory;
     protected $fillable = [
         'usuario',
-        'tipo'
+        'profissao'
     ];
     protected $hidden = [
         'created_at',
         'updated_at',
     ];
-    public function emprestimo() {
+    public function livro() {
         return $this->belongsToMany(Livro::class, 'emprestimos');
     }
 }
