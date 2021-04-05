@@ -36,7 +36,7 @@ Route::post('/fibonacci-save', [FibonacciController::class, 'addNumeros']);
 Route::delete('/fibonacci-delete/{id}', [FibonacciController::class, 'deleteNumero']);
 
 // Matriz
-Route::post('/matriz-list', [MatrizController::class, 'listXY']);
+Route::get('/matriz-list', [MatrizController::class, 'listXY']);
 Route::post('/matriz-save', [MatrizController::class, 'addXY']);
-Route::post('/matriz-delete/{id}', [MatrizController::class, 'deleteXY']);
+Route::delete('/matriz-delete/{id}', [MatrizController::class, 'deleteXY']);
 
