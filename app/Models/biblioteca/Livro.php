@@ -10,15 +10,15 @@ class Livro extends Model
     use HasFactory;
     protected $fillable = [
         'nome_livro',
+        'entrega',
+        'devolucao',
+        'usuario_id'
     ];
     protected $hidden = [
         'created_at',
         'updated_at',
     ];
     public function locador() {
-        return $this->hasOne(Usuario::class, 'id', 'livro_id');
-    }
-    public function emprestimo() {
-        return $this->hasOne(Emprestimo::class, 'livro_id');
+        return $this->hasOne(Usuario::class, 'id', 'usuario_id');
     }
 }

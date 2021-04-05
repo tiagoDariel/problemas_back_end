@@ -1,11 +1,10 @@
 <?php
 
-use App\Models\biblioteca\usuario;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateEmprestimosTable extends Migration
+class CreateMatrizsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,12 +13,10 @@ class CreateEmprestimosTable extends Migration
      */
     public function up()
     {
-        Schema::create('emprestimos', function (Blueprint $table) {
+        Schema::create('matrizs', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('livro_id')->constrained('livros');
-            $table->foreignId('usuario_id')->constrained('usuarios');
-            $table->date('entrega');
-            $table->date('devolucao');
+            $table->string('x');
+            $table->string('y');
             $table->timestamps();
         });
     }
@@ -31,6 +28,6 @@ class CreateEmprestimosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('emprestimos');
+        Schema::dropIfExists('matrizs');
     }
 }

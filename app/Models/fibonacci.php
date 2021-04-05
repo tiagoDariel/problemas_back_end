@@ -1,22 +1,19 @@
 <?php
 
-namespace App\Models\biblioteca;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Usuario extends Model
+class Fibonacci extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'usuario',
-        'profissao'
+        'numeros',
+        'numeros_fibonacci'
     ];
     protected $hidden = [
         'created_at',
         'updated_at',
     ];
-    public function livro() {
-        return $this->hasMany(Livro::class, 'usuario_id');
-    }
 }
